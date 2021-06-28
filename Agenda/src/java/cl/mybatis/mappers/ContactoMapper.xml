@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//END"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<mapper namespace="Contacto">
+    <insert id="insertarContacto" useGeneratedKeys="true" keyProperty="id" parameterType="cl.mybatis.pojo.Contacto">
+        insert into contacto (nombre, apellido, numero) values (#(nombre), #(apellido), #(numero))
+    </insert>
+    <select id="getContactos" resultType="cl.mybatis.pojos.Contacto">
+        select * from contacto
+    </select>
+     
+    
+</mapper>
